@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Check out Luxury Cuts service prices.">
+    <title>Pricing - Luxury Cuts Barbershop</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-color: #f4f4f4;
+        color: #090909;
+    }
+
+    /* Logo and Tabs Section */
+    .top-group {
+        display: flex;
+        align-items: center;  /* vertically */
+        justify-content: space-between; /* horizontally */
+        background-color: #000000;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1; /* stacks top header over everything in page */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (max-width: 7000px) {  /* targets screens 7,000 pixels wide */
+        .top-group {
+          flex-direction: column; /* stack tabs vertically */
+      }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo img { /* fade effect adjustments to logo */
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: fadeIn 0.5s ease-out forwards 0.5s;
+    }
+
+    .logo-text {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #444;
+        font-family: 'Copperplate';
+        margin-right: 40px;
+    }
+    .logo-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s ease-out forwards 0.5s;
+    }
+
+    .logo-text span {
+        color: #ffffff;
+    }
+
+    .logo-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .tab {
+        padding: 10px 15px;
+        color: white;
+        text-decoration: none;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .tab {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards 0.5s;
+    }
+
+    .active-tab {
+        color: rgb(184, 178, 142);
+    }
+
+    .tab:hover {
+        color: rgb(184, 178, 142);
+    }
+
+    /* Pricing Section */
+    h2 {
+        text-align: center;
+        font-size: 2em;
+        color: #333;
+        margin-top: 150px;
+        margin-right: 40px;
+    }
+
+    .pricing {
+        padding: 20px;
+        background-color: #f4f4f4;
+        border-top: 2px solid #000;
+        border-bottom: 2px solid #000;
+        margin: 20px auto;
+        margin-top: 10px;
+        max-width: 1100px;
+    }
+
+    .pricing-group {
+        display: flex;
+        justify-content: space-between;
+        column-gap: 0px;
+        
+    }
+
+    .column {
+        flex: 1; /* closeness of columns */
+    }
+
+    .pricing-item {
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .pricing-item h3 {
+        margin: 0;
+        font-size: 1.1em;
+        color: #555;
+    }
+
+    .pricing-item p {
+        font-size: 1em;
+        color: #747474;
+        margin-top: 5px;
+    }
+
+    .pricing-item p {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s ease-out forwards 0.5s;
+    }
+
+    /* Footer Section */
+    .footer {
+        background-color: black;
+        padding: 0.1px;
+        text-align: center;
+    }
+
+    .footer p {
+        color: gray;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        color: gold;
+        text-decoration: none;
+    }
+
+    .footer2 {
+        background-color: #3c3b3b;
+        padding: 1px;
+    }
+
+    .footer2 p {
+        color: white;
+        text-align: right;
+        font-size: 0.4em;
+        margin-right: 20px;
+    }
+
+    @keyframes fadeIn { /* needed for fading effect */
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+</style>
+</head>
+
+<body>
+  <!--Tabs and Logo Section-->
+  <div class="top-group">
+    <div class="logo">
+      <img src="https://img.freepik.com/premium-vector/barber-shop-logo-with-scissors-comb_651993-131.jpg"
+        alt="Scissors Logo">
+      <div class="logo-text">
+        <div>
+          <a href="index.html" class="logo-link">
+            Luxury Cuts <span>Barbershop</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="tabs">
+      <a href="index.html" class="tab">Home</a>
+      <a href="pricing.html" class="tab active-tab">Pricing</a>
+      <a href="appointment.html" class="tab">Book Now</a>
+      <a href="locations.html" class="tab">Locations</a>
+      <a href="faq.html" class="tab">FAQs</a>
+    </div>
+  </div>
+
+  <h2>Services & Prices</h2>
+  <section id="pricing" class="section">
+    <div class="pricing-group">
+      <!--First Column-->
+      <div class="column">
+        <div class="pricing-item">
+          <h3>Classic Haircut</h3>
+          <p>short to medium hairstyles</p>
+          <p class="price">$35</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Hot Towel Shave</h3>
+          <p>hot towel razor wet shave</p>
+          <p class="price">$35</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Beard Trims</h3>
+          <p>long and neat trim styling</p>
+          <p class="price">$20</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Razor Head Shaves</h3>
+          <p>straight razor head shave</p>
+          <p class="price">$40</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Hair + Beard Trim</h3>
+          <p class="price">$45</p>
+        </div>
+      </div>
+
+      <!--Second Column-->
+      <div class="column">
+        <div class="pricing-item">
+          <h3>Full Service</h3>
+          <p>haricut + hot towel shave (60-75 minute service) </p>
+          <p class="price">$60</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Buzzcut</h3>
+          <p>single size all around</p>
+          <p class="price">$25</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Head Shave + Beard Trim</h3>
+          <p class="price">$50</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Line Ups</h3>
+          <p class="price">$15</p>
+        </div>
+        <div class="pricing-item">
+          <h3>Kids Haircut</h3>
+          <p>Ages 0-12</p>
+          <p class="price">$20</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br><br><br><br><br>
+  <!--Footer-->
+  <footer class="footer">
+    <p>
+      <a href="https://yelp.com/"><img src="https://icon2.cleanpng.com/20180320/cee/avevgif7x.webp" alt="Yelp" style="width:30px;height:30px;"></a><br>
+      Write a review. Let us know how we're doing!<br><br>
+      <a href="faq.html">FAQs</a>
+      <a href="mailto:info@luxurycuts.com"><span></span>Email Us</a><br><br>
+      <a href="https://www.facebook.com/?_rdr"><img
+          src="https://static.wixstatic.com/media/b1cd13f9d4dfb1450bbb325285106177.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b1cd13f9d4dfb1450bbb325285106177.png"
+          alt="Facebook" style="width:30px;height:30px;"></a>
+      <a href="https://www.instagram.com/"><img
+          src="https://static.wixstatic.com/media/fbfeb4_b53a7e85ac8145e493ce5f1ecaa0ed87.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fbfeb4_b53a7e85ac8145e493ce5f1ecaa0ed87.png"
+          alt="Instagram" style="width:30px;height:30px;"></a>
+      <a href="https://x.com/?lang=en"><img
+          src="https://static.wixstatic.com/media/01113281ebb7dfb57a8dc2a02eb1cb92.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01113281ebb7dfb57a8dc2a02eb1cb92.png"
+          alt="Twitter" style="width:30px;height:30px;"></a><br>
+    </p>
+  </footer>
+
+  <footer class="footer2">
+    <p>&copy; 2024 Luxury Cuts Barbershop | All Rights Reserved</p>
+  </footer>
+
+
+  <script>
+    window.onbeforeunload = function () {   // scroll to the top of the page when load
+      window.scrollTo(0, 0);
+    };
+  </script>
+
+</body>
+
+</html>
