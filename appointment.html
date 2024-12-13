@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Book your next appointment at Classic Cuts Barbershop.">
+    <title>Appointments - Classic Cuts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!--Tabs and Logo Section-->
+    <div class="top-group">
+        <div class="logo">
+            <img src="logo.png" alt="Scissors Logo">
+            <div class="logo-text">
+                <a href="index.html" class="logo-link">Classic Cuts <span>Barbershop</span></a>
+            </div>
+        </div>
+        <div class="tabs">
+            <a href="index.html" class="tab">Home</a>
+            <a href="pricing.html" class="tab">Pricing</a>
+            <a href="appointment.html" class="tab active-tab">Book Now</a>
+            <a href="locations.html" class="tab">Locations</a>
+            <a href="faq.html" class="tab">FAQs</a>
+        </div>
+    </div>
+
+    <!--Header Section-->
+    <header>
+        <h1>Appointments</h1>
+        <p>Classic Cuts Barbershop</p>
+    </header>
+
+    <!--Confirmation Message Section-->
+    <div class="confirmation-message" id="confirmationMessage">
+        Thank you! Your appointment has been set! You will receive a message about the details. See you soon! 
+    </div>
+
+    <!--Appointment Form Section-->
+    <div class="appointment-group">
+        <div class="appointment-box">
+            <h2>Make an Appointment Online</h2>
+            <p>*Appointments can only be made for the same day</p>
+            
+            <form class="appointment" id="app">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <label for="phone">Your Phone Number</label>
+                <input type="number" id="phone" name="phone" placeholder="Your Phone Number" oninput="limitCharacters(this)" required> <!--phone number has limit-->
+                
+                <label for="service">Select a Service</label>
+                <select name="service" id="service" required>
+                    <option value="">Select a Service</option>
+                    <option value="haircut">Classic Haircut</option>
+                    <option value="towel">Hot Towel Shave</option>
+                    <option value="beard">Beard Trims</option>
+                    <option value="razor">Razor Head Shaves</option>
+                    <option value="buzz">Buzzcut</option>
+                    <option value="full">Full Service</option>
+                    <option value="hairbeard">Hair + Beard Trim</option>
+                    <option value="shavebeard">Head Shave + Beard Trim</option>
+                    <option value="lineup">Line Ups</option>
+                    <option value="kids">Kids Haircut</option>
+                </select>
+
+                <div class="row">
+                    <div class="column">
+                        <label for="location">Select Location</label>
+                        <select name="location" id="locationSelect" required>
+                            <option value="">Select Location</option>
+                            <option value="downtown">Classic Cuts - Downtown LA | 123 Main Street, CA</option>
+                            <option value="midtown">Classic Cuts - Glendale | 456 Elm Avenue, CA</option>
+                            <option value="suburban">Classic Cuts - Northridge | 789 Oak Blvd, CA</option>
+                        </select>
+                    </div>
+
+                    <div class="column">
+                        <label for="staff">Choose Staff</label>
+                        <select name="staff" id="staffSelect" required>
+                            <option value="">Choose Staff</option>
+                        </select>
+                    </div>
+                </div>
+
+                <label for="time">Select Time</label>
+                <div class="time-book">
+                    <input id="time" type="time" name="time" min="10:00" max="20:00" required>
+                    <button type="submit">Book Now</button>
+                </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+     <!--Business Hours-->
+     <div class="business-hours-container">
+        <div class="business-hours">
+            <h4>Business Hours</h4>
+            <p>Monday - Friday: 10am - 8pm</p>
+            <p>Saturday: 11am - 6pm</p>
+            <p>Sunday: Closed</p>
+        </div>
+    </div>
+
+    <!--Footer-->
+    <footer class="footer">
+        <p>
+            <a href="https://yelp.com/"><img src="https://icon2.cleanpng.com/20180320/cee/avevgif7x.webp" alt="Yelp" style="width:30px;height:30px;"></a><br>
+            Write a review. Let us know how we're doing!<br><br>
+            <a href="faq.html">FAQs</a>
+            <a href="mailto:info@classiccuts.com">Email Us</a><br><br>
+            <a href="https://www.facebook.com/?_rdr"><img src="https://static.wixstatic.com/media/b1cd13f9d4dfb1450bbb325285106177.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/b1cd13f9d4dfb1450bbb325285106177.png" alt="Facebook" style="width:30px;height:30px;"></a>
+            <a href="https://www.instagram.com/"><img src="https://static.wixstatic.com/media/fbfeb4_b53a7e85ac8145e493ce5f1ecaa0ed87.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fbfeb4_b53a7e85ac8145e493ce5f1ecaa0ed87.png" alt="Instagram" style="width:30px;height:30px;"></a>
+            <a href="https://x.com/?lang=en"><img src="https://static.wixstatic.com/media/01113281ebb7dfb57a8dc2a02eb1cb92.png/v1/fill/w_50,h_50,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/01113281ebb7dfb57a8dc2a02eb1cb92.png" alt="Twitter" style="width:30px;height:30px;"></a><br>
+        </p>
+    </footer>
+    
+    <footer class="footer2">
+        <p>&copy; 2024 Classic Cuts Barbershop | All Rights Reserved</p>
+    </footer>
+
+</body>
+
+<style>
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background-image: url('https://static.vecteezy.com/system/resources/previews/007/233/624/non_2x/brick-black-wall-texture-background-dark-brickwork-pattern-block-stone-structure-backdrop-dark-brick-wall-realistic-template-abstract-modern-wallpaper-design-illustration-vector.jpg');
+        color: #7a7a7a;
+    }
+
+    /* Logo and Tabs Section */
+    .top-group {
+        display: flex;
+        align-items: center;    /* vertically */
+        justify-content: space-between; /* horizontally */
+        background-color: #000000;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1; /* stacks top header over everything in page */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        
+    }
+
+    @media (max-width: 7000px) { /* targets screens up to 7,000 pixels wide */
+        .top-group {
+            flex-direction: column; /* stack tabs vertically */
+        }
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .logo img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .logo img { /* fade effect adjustments to logo */
+        opacity: 0;
+        transform: translateX(-20px);
+        animation: fadeIn 0.5s ease-out forwards 0.5s;
+    }
+
+    .logo-text {
+        font-size: 1.5em;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #444;
+        font-family: 'Copperplate';
+        margin-right: 40px;
+    }
+
+    .logo-text {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s ease-out forwards 0.5s;
+    }
+
+    .logo-text span {
+        color: #ffffff;
+    }
+
+    .logo-link {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .tab {
+        padding: 10px 15px; /* Adjust padding for closer tabs */
+        color: white;
+        text-decoration: none;
+        font-size: 0.7em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .tab {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 1s ease-out forwards 0.5s;
+    }
+
+    .active-tab {
+        color: rgb(184, 178, 142);
+    }
+
+    .tab:hover {
+        color: rgb(184, 178, 142);
+    }
+
+    /* Header Section */
+    header {
+        background: url('https://www.walsallcollege.ac.uk/wp-content/uploads/2021/04/Blog-Web-Images-14.png') no-repeat center center / cover;
+        color: #f4f4f4;
+        text-align: center;
+        padding: 50px;  /* adjusts header height */
+        margin-top: 60px;
+
+    }
+
+    header h1 {
+        font-size: 3em;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    header p {
+        font-size: 1.2em;
+    }
+
+    /* Appointment Section */
+    .appointment-group {
+        padding: 60px;
+    }
+
+    .appointment-box {
+        background: #fff9e9;
+        padding: 20px 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 500px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .appointment-box h2 {
+        margin-bottom: 20px;
+        color: #333333;
+    }
+    
+    .appointment-box p {
+        font-size: 0.7em;
+       margin-top: -15px;
+       margin-bottom: 20px;
+    }
+
+    .appointment-box label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #555555;
+    }
+
+    .appointment-box select, .appointment-box input {
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #5d3838;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.1);
+    }
+
+    .appointment-box select {
+        width: 101.25%;     /* adjusts drop-down answer box width */
+        
+    }
+
+    .appointment-box input {
+        width: 96.95%;  
+    }
+
+    .appointment-box button {       /* Book Now Button */
+        background-color: #be1711;
+        color: #ffffff;
+        padding: 12px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .appointment-box button:hover {
+        background-color: #6b0707;
+    }
+
+    .row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .row .column {
+        flex: 1;
+    }
+
+    .time-book {
+        display: flex;
+        align-items: center;    /* vertically aligns the input and button */
+        gap: 15px;      /* space between the input and button */
+        margin-bottom: 15px;
+    }
+
+    .time-book input {
+        width: 180px;   /* shortens the width of time input */
+    }
+
+    .time-book button {
+        flex: 1;
+        padding: 12px;
+        height: 42px;
+        transform: translateY(-8px);    /* adjusts button's position */
+    }
+
+    .time-book label {
+        display: block;
+        margin-bottom: 8px;     /* adds space between the label and input */
+        font-weight: bold;
+        color: #555555;
+    }
+
+    /* Confirmation Message Section */
+    .confirmation-message {
+        display: none;      /* keeps confirmation message hidden */
+        text-align: center;
+        font-size: 1.2em;
+        color: green;
+        margin-top: 10px;
+        font-weight: bold;
+        background: #e7f5e6;
+        padding: 10px;
+        border: 1px solid #d4edda;
+        border-radius: 5px;
+    }
+
+      /* Business Hours */
+      .business-hours {
+        border-top: 2px solid #959595;
+        text-align: center;
+        margin-left: 200px;
+        margin-right: 200px;
+        margin-bottom: 60px;
+    }
+
+    .business-hours h4 {
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 10px;
+        margin-top: 60px;
+        color: #f4f4f4;
+    }
+
+    .business-hours p {
+        font-size: 1em;
+        color: #f4f4f4;
+        margin: 5px 0;
+    }
+
+     /* Footer Section */
+    .footer {
+        background-color: black;
+        padding: 0.1px;
+        text-align: center;
+    }
+
+    .footer p {
+        color: gray;
+    }
+
+    .footer a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .footer a:hover {
+        color: gold;
+        text-decoration: none;
+    }
+
+    .footer2 {
+        background-color:#3c3b3b;
+        padding:1px;
+    }
+
+    .footer2 p {
+        color: white;
+        text-align: right;
+        font-size: 0.4em;
+        margin-right:20px;
+    }
+
+    @keyframes fadeIn {     /* needed for fading effect */
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+</style>
+
+<script>
+    // Gets dropdown results for staff based on selected location
+    const locationSelect = document.getElementById('locationSelect');
+    const staffSelect = document.getElementById('staffSelect');
+    const app = document.getElementById('app');     // for application form
+    const confirmationMessage = document.getElementById('confirmationMessage');     // needed to display confirmation message
+
+    const staffOptions = {  // gets staff at chosen location
+        downtown: ['Any Staff', 'Adam', 'Bob', 'Chris', 'Debra', 'Enrique'],
+        midtown: ['Any Staff', 'Frank', 'Grace', 'Helen', 'Isaac', 'John', 'Keegan'],
+        suburban: ['Any Staff', 'Luke', 'Mike', 'Noah', 'Olive']
+    };
+    // eventListener for when user selects location
+    locationSelect.addEventListener('change', () => {
+        const location = locationSelect.value;
+        staffSelect.innerHTML = '<option value="">Choose Staff</option>';   // clear anything existing in staff to give correct results from chosen location
+        if (staffOptions[location]) {   // will display staff will location has
+            staffOptions[location].forEach(staff => {
+                const option = document.createElement('option');    // creates a new option element for each staff member
+                option.value = staff.toLowerCase();
+                option.textContent = staff;
+                staffSelect.appendChild(option);
+            });
+        }
+    });
+    // for confirmation message
+    app.addEventListener('submit', (e) => { 
+        e.preventDefault(); 
+        confirmationMessage.style.display = 'block';
+        app.reset();    // clears appointment form once submit
+        window.scrollTo({ top: 0, behavior: 'smooth' });    // sends user to top of page where confirmation message is
+        setTimeout(() => {  
+            confirmationMessage.style.display = 'none';
+        }, 5000); // makes message disappear after 5 seconds
+    });
+
+
+function limitCharacters(input) {   //limits response to phone number to 10 digits only
+  if (input.value.length > 10) {
+    input.value = input.value.slice(0, 10);
+  }
+}
+    window.onbeforeunload = function () {   // scroll to the top of the page when load
+        window.scrollTo(0, 0);
+    };
+
+</script>
+
+</html>
